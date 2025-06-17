@@ -1,4 +1,4 @@
-![FeedPal](/docs/imgs/header.png)
+![FeedPal](https://github.com/Apparence-io/FeedPal/raw/master/docs/imgs/header.png)
 
 # FeedPal
 

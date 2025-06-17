@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import '../models/article.dart';
 
+const String _backendUrl = 'https://back.thefeedpal.app';
+
 /// Configuration for the Feed API.
 class FeedApiConfig {
-  // The base URL of the API.
+  // The base URL of the API. By default it's the FeedPal backend and you don't need to change it.
   final String baseUrl;
   
   // The API key to use for the API. (copied from the dashboard)
@@ -21,8 +23,8 @@ class FeedApiConfig {
   final Uri _baseUrl;
 
   FeedApiConfig({
-    required this.baseUrl, 
     required this.apiKey,
+    this.baseUrl = _backendUrl, 
     this.locale,
     this.debugMode = false,
   }) : _baseUrl = Uri.parse(baseUrl);
