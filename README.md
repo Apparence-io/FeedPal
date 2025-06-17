@@ -1,3 +1,5 @@
+![FeedPal](/docs/imgs/header.png)
+
 # FeedPal
 
 Grow your app and turn your users into fans Feed your blog and mobile app with
