@@ -31,9 +31,6 @@ class Feed {
   }
 
   Widget buildArticle(BuildContext context, String slug) {
-    return ArticleView(
-      slug: slug,
-      config: config,
-    );
+    return ArticleView(slug: slug, config: config);
   }
 }

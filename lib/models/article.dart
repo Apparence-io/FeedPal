@@ -64,7 +64,10 @@ class PaginatedResponse<T> {
     T Function(Map<String, dynamic>) fromJsonT,
   ) {
     return PaginatedResponse<T>(
-      content: (json['content'] as List).map((e) => fromJsonT(e as Map<String, dynamic>)).toList(),
+      content:
+          (json['content'] as List)
+              .map((e) => fromJsonT(e as Map<String, dynamic>))
+              .toList(),
       totalElements: json['totalElements'] as int,
       page: json['page'] as int,
       totalPages: json['totalPages'] as int,
@@ -85,9 +88,5 @@ class ListOptions {
   final int page;
   final int? itemsPerPage;
 
-  ListOptions({
-    required this.page,
-    this.itemsPerPage,
-  });
-
-} 
+  ListOptions({required this.page, this.itemsPerPage});
+}

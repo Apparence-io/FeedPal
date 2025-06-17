@@ -25,11 +25,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      onGenerateRoute: (settings) => switch(settings.name) {
-        '/' => MaterialPageRoute(builder: (context) => MyHomePage()),
-        '/article' => MaterialPageRoute(builder: (context) => ArticlePage(slug: settings.arguments as String)),
-        _ => throw Exception('Unknown route: ${settings.name}'),
-      },
+      onGenerateRoute:
+          (settings) => switch (settings.name) {
+            '/' => MaterialPageRoute(builder: (context) => MyHomePage()),
+            '/article' => MaterialPageRoute(
+              builder:
+                  (context) => ArticlePage(slug: settings.arguments as String),
+            ),
+            _ => throw Exception('Unknown route: ${settings.name}'),
+          },
     );
   }
 }
@@ -49,24 +53,25 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SafeArea(
         child: feed.buildList(
           context,
-          headerBuilder: (context) => Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 16),
-              Text(
-                "Ressources", 
-                style: Theme.of(context).textTheme.headlineLarge,
+          headerBuilder:
+              (context) => Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 16),
+                  Text(
+                    "Ressources",
+                    style: Theme.of(context).textTheme.headlineLarge,
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    style: Theme.of(
+                      context,
+                    ).textTheme.bodyMedium?.copyWith(color: Colors.grey[600]),
+                  ),
+                  SizedBox(height: 16),
+                ],
               ),
-              SizedBox(height: 8),
-              Text(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 
-                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color: Colors.grey[600],
-                ),
-              ),
-              SizedBox(height: 16),
-            ],
-          ),
           onTapItem: (article) {
             Navigator.pushNamed(context, '/article', arguments: article.slug);
           },
@@ -83,8 +88,6 @@ class ArticlePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: feed.buildArticle(context, slug),
-    );
+    return Scaffold(body: feed.buildArticle(context, slug));
   }
 }

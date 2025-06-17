@@ -9,11 +9,7 @@ class FeedListItem extends StatelessWidget {
   final Article article;
   final FeedListItemTapCallback onTap;
 
-  const FeedListItem({
-    super.key,
-    required this.article,
-    required this.onTap,
-  });
+  const FeedListItem({super.key, required this.article, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +25,7 @@ class FeedListItem extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: Colors.grey[200]!,
-            width: 1,
-          ),
+          border: Border.all(color: Colors.grey[200]!, width: 1),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -53,9 +46,9 @@ class FeedListItem extends StatelessWidget {
             SizedBox(height: 12),
             Text(
               DateFormat('MMM d, yyyy').format(article.publicationDate),
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                color: Colors.grey[600],
-              ),
+              style: Theme.of(
+                context,
+              ).textTheme.bodyMedium?.copyWith(color: Colors.grey[600]),
             ),
             SizedBox(height: 4),
             Text(
@@ -69,9 +62,9 @@ class FeedListItem extends StatelessWidget {
               article.contentPreview,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                color: Colors.grey[600],
-              ),
+              style: Theme.of(
+                context,
+              ).textTheme.bodyMedium?.copyWith(color: Colors.grey[600]),
             ),
           ],
         ),

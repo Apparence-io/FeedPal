@@ -8,7 +8,8 @@ import 'package:feedpal/models/article.dart';
 
 enum ArticleViewState { loading, error, loaded }
 
-typedef ArticleViewBuilder = Widget Function(ArticleViewState state, Article? article);
+typedef ArticleViewBuilder =
+    Widget Function(ArticleViewState state, Article? article);
 
 class ArticleView extends StatefulWidget {
   final String slug;
