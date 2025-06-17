@@ -1,0 +1,8 @@
+{
+    "editor.formatOnSave": true,
+    "[dart]": {
+        "editor.formatOnSave": false,
+        "editor.inlayHints.enabled": "off"
+    },
+    "java.configuration.updateBuildConfiguration": "disabled"
+}
