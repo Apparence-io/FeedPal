@@ -7,8 +7,9 @@ void main() {
 }
 
 final config = FeedApiConfig(
-  baseUrl: 'http://localhost:8080',
+  // Replace with your own API key.
   apiKey: 'hlfkdshdfjkshdf!3234',
+  // Replace with device locale or let the API use default locale
   locale: 'en',
 );
 

@@ -1,6 +1,6 @@
 ![FeedPal](https://github.com/Apparence-io/FeedPal/raw/master/docs/imgs/header.png)
 
-# FeedPal
+# FeedPal (beta)
 
 Grow your app and turn your users into fans Feed your blog and mobile app with
 fresh, engaging content automatically and effortlessly.
