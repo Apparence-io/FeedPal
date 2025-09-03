@@ -1,4 +1,3 @@
-import 'package:feedpal/api/feed_api.dart';
 import 'package:feedpal/feed.dart';
 import 'package:flutter/material.dart';
 
