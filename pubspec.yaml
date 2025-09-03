@@ -1,6 +1,6 @@
 name: feedpal
 description: "Grow your app and turn your users into fans Feed your blog and mobile app with fresh, engaging content automatically and effortlessly."
-version: 0.0.1
+version: 0.0.2
 homepage: https://thefeedpal.app
 
 environment:
@@ -10,13 +10,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^1.4.0
-  intl: ^0.19.0
-  flutter_markdown_plus: ^1.0.3
+  http: ^1.5.0
+  intl: ^0.20.2
+  flutter_markdown_plus: ^1.0.5
   markdown: ^7.3.0
 
 dev_dependencies:
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
   flutter_test:
     sdk: flutter
 

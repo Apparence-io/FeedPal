@@ -5,6 +5,7 @@ import 'package:feedpal/components/feed_list_item.dart';
 import 'package:flutter/material.dart';
 
 export 'models/article.dart';
+export 'api/feed_api.dart';
 
 typedef WidgetBuilder = Widget Function(BuildContext context);
 
