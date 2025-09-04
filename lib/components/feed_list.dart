@@ -33,6 +33,9 @@ class FeedList extends StatefulWidget {
   /// usually redirect to the article page
   final FeedListItemTapCallback onTapItem;
 
+  /// provide this if you want to customize the scroll physics
+  final ScrollPhysics? physics;
+
   const FeedList({
     super.key,
     required this.config,
@@ -41,6 +44,7 @@ class FeedList extends StatefulWidget {
     this.itemBuilder,
     this.errorBuilder,
     this.loaderBuilder,
+    this.physics,
   });
 
   @override
@@ -117,6 +121,7 @@ class _FeedListState extends State<FeedList> {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: CustomScrollView(
             controller: scrollController,
+            physics: widget.physics ?? const AlwaysScrollableScrollPhysics(),
             slivers: [
               if (widget.header != null)
                 SliverToBoxAdapter(child: widget.header!(context)),

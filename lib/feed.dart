@@ -21,6 +21,7 @@ class Feed {
     FeedListItemBuilder? itemBuilder,
     WidgetBuilder? loaderBuilder,
     WidgetBuilder? errorBuilder,
+    ScrollPhysics? physics,
   }) {
     return FeedList(
       config: config,
@@ -28,6 +29,7 @@ class Feed {
       header: headerBuilder,
       itemBuilder: itemBuilder,
       errorBuilder: errorBuilder,
+      physics: physics,
     );
   }
 
