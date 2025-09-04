@@ -1,6 +1,6 @@
 name: feedpal
 description: "Grow your app and turn your users into fans Feed your blog and mobile app with fresh, engaging content automatically and effortlessly."
-version: 0.0.2
+version: 0.0.3
 homepage: https://thefeedpal.app
 
 environment:

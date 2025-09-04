@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 enum FeedListState { loading, error, loaded }
 
-typedef FeedListItemBuilder = Widget Function(Article article);
+typedef FeedListItemBuilder = Widget Function(Article article, int index);
 
 const int itemsPerPage = 20;
 
@@ -135,7 +135,7 @@ class _FeedListState extends State<FeedList> {
                 FeedListState.loading => SliverList.separated(
                   itemBuilder: (context, index) {
                     if (widget.itemBuilder != null) {
-                      return widget.itemBuilder!(value[index]);
+                      return widget.itemBuilder!(value[index], index);
                     }
                     return FeedListItem(
                       article: value[index],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown_plus/flutter_markdown_plus.dart' as md;
 import 'package:intl/intl.dart';
+// ignore: implementation_imports
 import 'package:markdown/src/ast.dart' as mdast show Element;
 
 import 'package:feedpal/api/feed_api.dart';

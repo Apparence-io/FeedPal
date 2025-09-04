@@ -9,7 +9,7 @@ class FeedListItem extends StatelessWidget {
   final Article article;
   final FeedListItemTapCallback onTap;
 
-  const FeedListItem({super.key, required this.article, required this.onTap});
+  const FeedListItem({super.key, required this.article, required this.onTap,});
 
   @override
   Widget build(BuildContext context) {
